@@ -1,0 +1,118 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.App:hover .App-logo {
+  transform: rotate(360deg);
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.App-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, #61dafb, #9c00ff, #ff007f, #61dafb);
+  opacity: 0.4;
+  transform: rotate(-45deg);
+  z-index: -1;
+  animation: pulse-gradient 10s linear infinite;
+}
+
+@keyframes pulse-gradient {
+  0% {
+    transform: rotate(-45deg) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.5);
+    opacity: 0.6;
+  }
+  100% {
+    transform: rotate(-45deg) scale(1);
+    opacity: 0.4;
+  }
+}
+
+.App-header h1 {
+  margin-bottom: 2rem;
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.App-link {
+  color: #61dafb;
+  transition: color 0.3s ease-in-out;
+}
+
+.App-link:hover {
+  color: #9c00ff;
+}
+
+/* Anime Effects */
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 5px #9c00ff;
+  }
+  50% {
+    text-shadow: 0 0 20px #9c00ff;
+  }
+  100% {
+    text-shadow: 0 0 5px #9c00ff;
+  }
+}
+
+.App-anime {
+  position: relative;
+}
+
+.App-anime .App-logo {
+  animation: floating 2s ease-in-out infinite;
+}
+
+.App-anime .App-header h1 {
+  animation: glowing 2s ease-in-out infinite;
+}

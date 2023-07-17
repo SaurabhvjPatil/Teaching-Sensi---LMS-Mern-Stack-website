@@ -1,0 +1,31 @@
+.product-card {
+    position: relative;
+    border: 1px solid transparent;
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    border-color: rgba(0, 255, 255, 0.8);
+    z-index: 1;
+  }
+  
+  .product-card::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid rgba(0, 255, 255, 0.8);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .product-card:hover::after {
+    opacity: 1;
+  }
+  

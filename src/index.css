@@ -1,0 +1,170 @@
+/* CSS code */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+}
+
+.site-container {
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.btn-primary,
+.btn-outline-primary {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rating span {
+  color: #e74c3c;
+}
+
+.product {
+  border: 1px #808080 solid;
+  margin: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+.img-large {
+  max-width: 100%;
+}
+
+.img-thumbnail {
+  height: 80px;
+  border-radius: 4px;
+}
+
+.small-container {
+  max-width: 600px;
+}
+
+.checkout-steps > div {
+  border-bottom: 0.2rem solid #a0a0a0;
+  color: #a0a0a0;
+}
+
+.checkout-steps > div.active {
+  border-bottom: 0.2rem solid #e74c3c;
+  color: #e74c3c;
+}
+
+/* sidebar */
+.navbar-brand {
+  font-weight: bold;
+}
+
+.side-navbar {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: #111111;
+  transition: 0.5s;
+}
+
+.site-container {
+  transition: 0.4s;
+}
+
+.active-cont {
+  margin-left: 240px;
+}
+
+.active-nav {
+  left: 0;
+}
+
+.text-bold {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Map */
+
+.full-box {
+  height: 100vh;
+  max-width: initial;
+}
+
+.full-box header,
+.full-box footer {
+  display: none;
+}
+
+.full-box .container {
+  height: 100vh;
+  max-width: initial;
+  margin: 0;
+  padding: 0;
+}
+
+.full-box .mt-3 {
+  margin-top: 0 !important;
+}
+
+.map-input-box {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0.5rem auto;
+  width: 25rem;
+  height: 3rem;
+  display: flex;
+}
+
+.map-input-box input {
+  border-radius: 1rem 0 0 1rem;
+  border-right: 0;
+  padding: 0.5rem;
+}
+
+.map-input-box button {
+  border-radius: 0 1rem 1rem 0;
+  border-left: 0;
+  background-color: #e74c3c;
+  color: #ffffff;
+  padding: 0.5rem;
+}
+
+button.thumbnail {
+  padding: 0;
+}
+
+/* Customized Colors */
+:root {
+  --primary-color: #e74c3c;
+  --secondary-color: #ffffff;
+  --text-color: #000000;
+  --background-color: #f8f8f8;
+}
